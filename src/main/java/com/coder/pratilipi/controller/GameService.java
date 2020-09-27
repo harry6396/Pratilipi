@@ -193,17 +193,17 @@ public class GameService {
 		
 		yellowCount = 0;
 		redCount = 0;
-		
+		int xCounter = 0;
 // check for bottom-top diagonal
 		
 		for(int iCounter = 6; iCounter >= 0; iCounter--) 
 		{
 			
-			if(move[iCounter][iCounter] == 1) {
+			if(move[iCounter][xCounter] == 1) {
 				yellowCount++;
 				redCount = 0;
 			}
-			else if(move[iCounter][iCounter] == 2) {
+			else if(move[iCounter][xCounter] == 2) {
 				redCount++;
 				yellowCount = 0;
 			}
@@ -216,7 +216,7 @@ public class GameService {
 			{
 				totalRedCount++;
 			}
-			
+			xCounter++;
 		}
 		
 // check for winner
